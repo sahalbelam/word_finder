@@ -44,7 +44,7 @@ const Page = () => {
   
       console.log(videoId);
   
-      const response = await fetch('/api/yt', {
+      const response = await fetch(`${window.location.origin}/api/yt`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ videoId }),
