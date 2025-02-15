@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Reddit Browser
 
-## Getting Started
+## 🚀 Project Overview
 
-First, run the development server:
+**The Reddit Browser** is a powerful search engine that allows users to search for specific content exclusively within Reddit. Built with **Next.js**, **ShadCN**, and **Tailwind CSS**, this project delivers a fast, seamless, and modern user experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🛠️ Tech Stack
+
+- **Next.js** – React-based framework for optimized performance and server-side rendering.
+- **ShadCN** – Beautifully styled UI components.
+- **Tailwind CSS** – Utility-first CSS framework for rapid UI development.
+
+## 📌 Features
+
+- 🔍 **Advanced Search** – Quickly find relevant Reddit posts.
+- 🌙 **Dark Mode** – Enjoy a sleek dark theme.
+- 📌 **User-Friendly Interface** – Minimalist and intuitive UI.
+- 🚀 **Fast Performance** – Optimized with server-side rendering.
+
+## 📂 Project Structure
+
+```
+├── app/                   # Next.js App Router Structure
+│   ├── api/               # Backend API routes
+│   ├── components/        # UI Components using ShadCN
+│   ├── styles/            # Tailwind CSS styles
+│   ├── utils/             # Helper functions
+│   ├── pages/             # Main pages
+│   ├── public/            # Static assets
+│   └── ...
+├── .env                   # Environment variables
+├── package.json           # Dependencies and scripts
+├── tailwind.config.js     # Tailwind CSS configuration
+├── next.config.js         # Next.js configuration
+└── README.md              # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Installation & Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1️⃣ **Clone the Repository**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+git clone https://github.com/yourusername/reddit-browser.git
+cd reddit-browser
+```
 
-## Learn More
+2️⃣ **Install Dependencies**
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+yarn install  # or npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3️⃣ **Set Up Environment Variables** Create a `.env.local` file and configure the necessary API keys:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+NEXT_PUBLIC_API_KEY=your_api_key_here
+```
 
-## Deploy on Vercel
+4️⃣ **Run the Development Server**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+yarn dev  # or npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔗 Open http\://localhost:3000 in your browser.
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+## 🙌 Contributing
+
+We welcome contributions! Feel free to submit issues and pull requests.
+
+---
+
+💡 **Built with Next.js, ShadCN, and Tailwind CSS.**
+
