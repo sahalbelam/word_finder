@@ -44,7 +44,7 @@ const Page = () => {
   
       console.log(videoId);
   
-      const response = await fetch('/api/yt', {
+      const response = await fetch('https://word-finder-puce-six.vercel.app/api/yt', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ videoId }),
