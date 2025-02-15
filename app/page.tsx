@@ -17,12 +17,15 @@ const Page = () => {
 
   const extractVideoId = (url: string) => {
     try {
-      const videoUrl = new URL(url);
-      return videoUrl.searchParams.get('v') || videoUrl.pathname.slice(1);
+      const match = url.match(
+        /(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|youtube\.com\/shorts\/)([^"&?/\s]{11})/
+      );
+      return match ? match[1] : null;
     } catch {
       return null;
     }
   };
+  
 
   const handleRequest = async () => {
     setError('');
