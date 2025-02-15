@@ -54,7 +54,7 @@ const Page = () => {
   
       const transcript = data.transcript;
       const regex = new RegExp(`\\b${word}\\b`, "i");
-      const matches = transcript.filter((item: any) => regex.test(item.text));
+      const matches = transcript.filter((item: { text: string }) => regex.test(item.text));
   
       if (matches.length > 0) {
         setSearchResults(matches);
@@ -63,8 +63,12 @@ const Page = () => {
         setError(`The word "${word}" was not found in the transcript.`);
         setTime(0);
       }
-    } catch (error: any) {
-      setError(error.message || "An error occurred while fetching the transcript.");
+    }catch (error) {
+      if (error instanceof Error) {
+        setError(error.message || "An error occurred while fetching the transcript.");
+      } else {
+        setError("An unknown error occurred.");
+      }
       setTime(0);
     } finally {
       setLoading(false);
@@ -125,7 +129,7 @@ const Page = () => {
             {searchResults.length > 0 && (
               <div className="space-y-2">
                 <p className="text-sm text-gray-600">
-                  Found {searchResults.length} occurrence(s) of "{word}"
+                  Found {searchResults.length} occurrence(s) of &quot;{word}&quot;
                 </p>
                 <div className="max-h-40 overflow-y-auto space-y-2">
                   {searchResults.map((result, index) => (

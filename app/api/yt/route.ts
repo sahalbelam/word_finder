@@ -13,6 +13,6 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ transcript });
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch transcript' }, { status: 500 });
+    return NextResponse.json({ error: error }, { status: 500 });
   }
 }
