@@ -8,8 +8,8 @@ export async function POST(req: Request) {
     if (!videoId) {
       return NextResponse.json({ error: 'Video ID is required' }, { status: 400 });
     }
-
-    const transcript = await YoutubeTranscript.fetchTranscript(videoId);
+    let transcript = []
+    transcript = await YoutubeTranscript.fetchTranscript(videoId);
 
     return NextResponse.json({ transcript });
   } catch (error) {

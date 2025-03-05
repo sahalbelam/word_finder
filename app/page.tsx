@@ -44,13 +44,14 @@ const Page = () => {
   
       console.log(videoId);
   
-      const response = await fetch('https://word-finder-puce-six.vercel.app/api/yt', {
+      const response = await fetch('/api/yt', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ videoId }),
       });
   
       const data = await response.json();
+      console.log(data)
       if (!response.ok) {
         throw new Error(data.error || 'Failed to fetch transcript.');
       }
