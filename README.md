@@ -1,6 +1,6 @@
 # YouTube WordFinder
 
-A web application that helps users find specific words in YouTube videos by searching through video transcripts and jumping directly to those moments.
+A web application that helps users find specific words in YouTube videos by searching through video transcripts and jumping directly to those moments. (Currently, the API is getting blocked online, but it works perfectly fine locally. Set it up yourself and see the difference.)
 
 ## Features
 
